@@ -1,0 +1,80 @@
+body {
+    background: url('resimler/manzara.jpg') no-repeat center center/cover fixed;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(44, 28, 18, 0.7);
+    z-index: -1;
+}
+
+.dogal-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background: rgba(62, 39, 35, 0.9);
+    border-bottom: 3px solid #8d6e63;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(5px);
+}
+
+.dogal-logo { font-size: 24px; font-weight: bold; color: #d7ccc8; letter-spacing: 2px; display: flex; align-items: center; gap: 10px; }
+.dogal-menu a { text-decoration: none; color: #a1887f; margin-left: 30px; font-weight: 500; transition: 0.3s; font-size: 16px; }
+.dogal-menu a:hover, .dogal-menu a.aktif { color: #fff; text-shadow: 0 0 10px rgba(255,255,255,0.5); }
+.geri-don-btn { border: 2px solid #8d6e63; padding: 8px 20px; border-radius: 20px; color: #d7ccc8 !important; }
+.geri-don-btn:hover { background: #d7ccc8; color: #3e2723 !important; }
+
+.hero-bolumu { height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; position: relative; padding-top: 60px; }
+.hero-baslik { text-align: center; margin-bottom: 20px; z-index: 10; }
+.hero-baslik h1 { font-size: 3.5rem; color: #f1f2f6; text-shadow: 2px 2px 10px rgba(0,0,0,0.8); margin: 0; }
+.hero-baslik p { color: #d7ccc8; font-size: 1.2rem; margin-top: 10px; }
+
+.sahne { width: 100%; height: 500px; perspective: 2000px; display: flex; justify-content: center; align-items: center; }
+.slider { position: relative; width: 300px; height: 450px; transform-style: preserve-3d; transition: transform 1s ease-in-out; transform: rotateX(-5deg); }
+.kart { position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(62, 39, 35, 0.95); border: 4px solid #5d4037; border-radius: 15px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.6); transform: rotateY(calc(var(--i) * 72deg)) translateZ(450px); backface-visibility: visible !important; }
+.kart img { width: 100%; height: 60%; object-fit: cover; border-bottom: 4px solid #5d4037; filter: sepia(30%); }
+
+.bilgi { padding: 20px; text-align: center; color: white; }
+.bilgi h3 { color: #d7ccc8; margin-bottom: 10px; font-size: 22px; }
+.bilgi p { font-size: 14px; color: #a1887f; }
+
+.kontrol-panel { position: absolute; bottom: 5px; display: flex; gap: 40px; z-index: 100; }
+.nav-btn { background: rgba(62, 39, 35, 0.8); border: 2px solid #d7ccc8; color: #d7ccc8; font-size: 24px; width: 60px; height: 60px; border-radius: 50%; cursor: pointer; transition: 0.3s; }
+.nav-btn:hover { background: #d7ccc8; color: #3e2723; transform: scale(1.1); }
+
+.icerik-bolumu { background: #3e2723; color: #d7ccc8; padding: 80px 20px; text-align: center; border-top: 4px solid #8d6e63; }
+.icerik-container { max-width: 800px; margin: 0 auto; }
+.icerik-bolumu h2 { font-size: 2.5rem; margin-bottom: 20px; color: #fff; }
+.icerik-bolumu p { font-size: 1.1rem; line-height: 1.6; }
+
+.dogal-footer { background: #281a16; color: #8d6e63; text-align: center; padding: 40px; border-top: 1px solid #3e2723; }
+.sosyal-linkler i { font-size: 20px; margin: 0 10px; cursor: pointer; transition: 0.3s; }
+.sosyal-linkler i:hover { color: #d7ccc8; }
+
+@media (max-width: 768px) {
+    .dogal-navbar { padding: 15px 20px; flex-direction: column; gap: 15px; }
+    .dogal-menu { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .dogal-menu a { margin-left: 0; font-size: 14px; }
+    .hero-bolumu { padding-top: 140px; height: auto; min-height: 100vh; overflow: hidden; }
+    .hero-baslik h1 { font-size: 2rem; }
+    .hero-baslik p { font-size: 1rem; padding: 0 20px; }
+    .sahne { height: 400px; perspective: 1000px; margin-top: 20px; }
+    .slider { width: 200px; height: 300px; }
+    .kart { transform: rotateY(calc(var(--i) * 72deg)) translateZ(250px); }
+    .bilgi h3 { font-size: 18px; }
+    .bilgi p { font-size: 12px; }
+    .kontrol-panel { bottom: 20px; gap: 20px; }
+    .nav-btn { width: 50px; height: 50px; font-size: 20px; }
+    .icerik-bolumu { padding: 40px 20px; }
+    .icerik-bolumu h2 { font-size: 1.8rem; }
+}
