@@ -1,7 +1,7 @@
 # 🚀 Web Tasarım Üssü (Kişisel Dijital Portfolyo ve İçerik Yönetim Sistemi)
 
-**Geliştirici:** Oğuzhan Ulutaş  
-**Canlı Yayın Linki (Deploy):** [Buraya InfinityFree Linkinizi Yapıştırın]  
+**Geliştirici:** Mehmet Emin Ulutaş  
+**Canlı Yayın Linki (Deploy):** [https://gweinbleid.infinityfreeapp.com]  
 
 ## 📌 1. Projenin Amacı
 Bu projenin temel amacı; sunucu taraflı (back-end) bir programlama dili olan **PHP 8** ile modern ön yüz (front-end) teknolojilerini harmanlayarak dinamik, güvenli, modüler ve kullanıcı etkileşimli nesnel bir web uygulaması geliştirmektir. Projede, statik veri sunumunun ötesine geçilerek; oturum yönetimi (session) ile rol bazlı sayfa yetkilendirmesi, harici REST API servisleri aracılığıyla asenkron canlı veri çekimi, form verilerinin manipülasyona karşı korunması ve veritabanı alternatifi olarak dosya tabanlı JSON manipülasyonu gibi modern web mühendisliği standartlarının uygulanması hedeflenmiştir.
